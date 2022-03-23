@@ -19,17 +19,17 @@ describe('Test clase NumericSearchableCollection', () => {
         expect(NC.search(4)).to.be.deep.equal([4,4,4]);
     });
     it ('Funcionamiento de addItem', () => {
-        expect(NC.addItem(4)).not.to.be.deep.equal(undefined);
+        expect(NC.addItem(4)).to.be.deep.equal(undefined);
     });
     it ('Funcionamiento de removeItem', () => {
-        expect(NC.addItem(2)).not.to.be.deep.equal(undefined);
+        expect(NC.removeItem(2)).to.be.deep.equal(undefined);
     });
 }); 
 
 describe('Test clase StringSearchableCollection', () => {
     
     it ('Funcionamiento de getItem', () => {
-        expect(SC.getItem(2)).to.be.deep.equal('eeee');
+        expect(SC.getItem(2)).to.be.deep.equal('aeoe');
     });
     it ('Funcionamiento de getNumberOfItems', () => {
         expect(SC.getNumberOfItems()).to.be.deep.equal(4);

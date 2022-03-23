@@ -1,6 +1,7 @@
 {
     "entryPoints": [
-        "./pe101/pe101.ts"
+        "./pe101/searchableCol.ts",
+        "./pe101/interface.ts"
     ],
     "out": "./doc"
 }

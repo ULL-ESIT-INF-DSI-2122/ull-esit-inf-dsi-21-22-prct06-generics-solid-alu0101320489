@@ -40,16 +40,16 @@ export abstract class SearchableCollection<T> implements Collectable<T>, Searcha
     abstract search(term: T): T[];
 }
 
-export class NumericSearchableCollection<T extends number> extends SearchableCollection<T> {
-    constructor(collection: T[]) {
+export class NumericSearchableCollection extends SearchableCollection<number> {
+    constructor(collection: number[]) {
         super(collection);
     }
     /**
      * Método buscar un número concreto y devolverá un array con todas las ocurrencias de dicho número en la colección
      * @param term Elemento a buscar
      */
-    search(term: T): T[] {
-        let result: T[] = [];
+    search(term: number): number[] {
+        let result: number[] = [];
         for (let i = 0; i < this.getNumberOfItems(); i++) {
             if (term == this.collection[i]) {
                 result.push(term);

@@ -1,0 +1,6 @@
+{
+    "entryPoints": [
+        "./pe101/pe101.ts"
+    ],
+    "out": "./doc"
+}

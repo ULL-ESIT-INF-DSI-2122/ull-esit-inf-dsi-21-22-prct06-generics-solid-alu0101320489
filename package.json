@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "tsc-watch --onSuccess \"node dist/index.js\"",
-        "coverage": "nyc npm test",
+        "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls && rm .nyc_output",
         "doc": "typedoc",
         "test": "mocha"
     },

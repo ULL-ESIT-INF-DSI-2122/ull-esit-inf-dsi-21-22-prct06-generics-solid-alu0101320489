@@ -5,7 +5,7 @@ import {Decodificacion } from "../src/ejercicio-3/cifrado";
 
 let cod = new Codificacion('BC', 'HOLA', []);
 let decod = new Decodificacion('BC', 'IQMC', []);
-describe('Test clase COdificacion y descoficacion', () => {
+describe('Test clase COdificacion y Decodificacion', () => {
     
     it ('Codificacion', () => {
         expect(cod.codificar()).to.be.deep.equal('IQMC');

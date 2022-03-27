@@ -1,40 +1,39 @@
 import 'mocha';
 import {expect} from 'chai';
-import {Searchable} from '../pe101/interface'
-import {Collectable} from '../pe101/interface'
-import {SearchableCollection} from '../pe101/searchableCol'
-import {NumericSearchableCollection} from '../pe101/searchableCol'
-import {StringSearchableCollection} from '../pe101/searchableCol'
-let NC = new NumericSearchableCollection ([1,2,3,4,4,4]);
-let SC = new StringSearchableCollection (['aaaa','eeee','aeoe', 'eaa']);
-describe('Test clase NumericSearchableCollection', () => {
-    
-    it ('Funcionamiento de getItem', () => {
-        expect(NC.getItem(2)).to.be.deep.equal(3);
-    });
-    it ('Funcionamiento de getNumberOfItems', () => {
-        expect(NC.getNumberOfItems()).to.be.deep.equal(6);
-    });
-    it ('Funcionamiento de search', () => {
-        expect(NC.search(4)).to.be.deep.equal([4,4,4]);
-    });
-    it ('Funcionamiento de addItem', () => {
-        expect(NC.addItem(4)).to.be.deep.equal(undefined);
-    });
-    it ('Funcionamiento de removeItem', () => {
-        expect(NC.removeItem(2)).to.be.deep.equal(undefined);
-    });
-}); 
+import {Fighter} from '../src/ejercicio-1/fighter'
+import {Pokemon} from '../src/ejercicio-1/universe'
+import {Marvel} from '../src/ejercicio-1/universe'
+import {DragonBall} from '../src/ejercicio-1/universe'
+import {Disney} from '../src/ejercicio-1/universe'
+import {Pokedex} from '../src/ejercicio-1/pokedex'
 
-describe('Test clase StringSearchableCollection', () => {
+let goku = new DragonBall('Goku', 80, 180, [150, 150, 100, 110], 'yin');
+let blackgoku = new DragonBall('BlackGoku', 70, 180, [170, 110, 100, 110], 'yang');
+let charizard = new Pokemon('Charizard', 100, 220, [120, 90, 120, 120], 'fuego');
+
+let pokedex = [goku, charizard, blackgoku];
+
+
+describe('Test clase Fighter y derivadas', () => {
     
-    it ('Funcionamiento de getItem', () => {
-        expect(SC.getItem(2)).to.be.deep.equal('aeoe');
+    it ('Nombre del personaje debe ser Goku', () => {
+        expect(goku.getNombre()).to.be.deep.equal('Goku');
     });
-    it ('Funcionamiento de getNumberOfItems', () => {
-        expect(SC.getNumberOfItems()).to.be.deep.equal(4);
+    it ('El peso debe ser 80', () => {
+        expect(goku.getPeso()).to.be.deep.equal(80);
     });
-    it ('Funcionamiento de search', () => {
-        expect(SC.search('aa')).to.be.deep.equal(['aaaa','eaa']);
+    it ('La altura debe ser 180', () => {
+        expect(goku.getAltura()).to.be.deep.equal(180);
+    });
+    it ('La energia debe ser yin', () => {
+        expect(goku.getEnergia()).to.be.deep.equal('yin');
+    });
+    it ('Sus estadísticas deben ser (150, 150, 100, 110)', () => {
+        expect(goku.getStats()).to.be.deep.equal([150, 150, 100, 110]);
     });
 });
+
+describe('Test clase Combate', () => {
+    
+    
+}); 

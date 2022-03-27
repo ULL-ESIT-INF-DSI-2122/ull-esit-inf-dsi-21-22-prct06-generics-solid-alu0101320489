@@ -33,7 +33,3 @@ describe('Test clase Fighter y derivadas', () => {
     });
 });
 
-describe('Test clase Combate', () => {
-    
-    
-}); 

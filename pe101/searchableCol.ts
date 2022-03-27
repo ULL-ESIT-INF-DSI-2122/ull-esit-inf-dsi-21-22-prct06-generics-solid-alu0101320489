@@ -31,7 +31,7 @@ export abstract class SearchableCollection<T> implements Collectable<T>, Searcha
         this.collection.splice(n, 1);
     }
     /**
-     * Meétodo que devuelve el número de elemtos de la colección
+     * Método que devuelve el número de elemtos de la colección
      */
     getNumberOfItems(): number{
         return this.collection.length;
